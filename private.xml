@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Swap Command_L for Control_L except for Terminal, Vi, Eclipse, X11</name>
+    <identifier>private.swap_left_command_for_control_except_for_some_apps</identifier>
+    <not>TERMINAL,VI,ECLIPSE,X11</not>
+    <autogen>
+      --KeyToKey--
+      KeyCode::COMMAND_L,
+      KeyCode::CONTROL_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CONTROL_L,
+      KeyCode::COMMAND_L
+    </autogen>
+  </item>
+  <item>
+    <name>Swap Control_L + BS for Command_L + BS for Terminal, Vi, Eclipse, X11</name>
+    <identifier>private.swap_left_control_bs_for_left_command_bs_for_some_apps</identifier>
+    <only>TERMINAL,VI,ECLIPSE,X11</only>
+    <autogen>
+      --KeyToKey--
+      KeyCode::DELETE, ModifierFlag::CONTROL_L,
+      KeyCode::DELETE, ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::DELETE, ModifierFlag::COMMAND_L,
+      KeyCode::DELETE, ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+  <item>
+    <name>Swap Control_L + Tab for Command_L + Tab for Terminal, Vi, Eclipse, X11</name>
+    <identifier>private.swap_left_control_tab_for_left_command_tab_for_some_apps</identifier>
+    <only>TERMINAL,VI,ECLIPSE,X11</only>
+    <autogen>
+      --KeyToKey--
+      KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_R,
+      KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_R
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_R,
+      KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_R
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::TAB, ModifierFlag::CONTROL_L,
+      KeyCode::TAB, ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::TAB, ModifierFlag::COMMAND_L,
+      KeyCode::TAB, ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+</root>
