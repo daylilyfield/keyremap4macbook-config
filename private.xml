@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <root>
+
   <item>
     <name>Swap Command_L for Control_L except for Terminal, Vi, Eclipse, X11</name>
     <identifier>private.swap_left_command_for_control_except_for_some_apps</identifier>
@@ -15,6 +16,53 @@
       KeyCode::COMMAND_L
     </autogen>
   </item>
+
+  <item>
+    <name>Swap Control_L + Arrow for Command_L + Arrow for Terminal, Vi, Eclipse, X11</name>
+    <identifier>private.swap_left_command_arrow_for_control_arrow_except_for_some_apps</identifier>
+    <only>TERMINAL,VI,ECLIPSE,X11</only>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+
   <item>
     <name>Swap Control_L + BS for Command_L + BS for Terminal, Vi, Eclipse, X11</name>
     <identifier>private.swap_left_control_bs_for_left_command_bs_for_some_apps</identifier>
@@ -30,6 +78,7 @@
       KeyCode::DELETE, ModifierFlag::CONTROL_L
     </autogen>
   </item>
+
   <item>
     <name>Swap Control_L + Tab for Command_L + Tab for Terminal, Vi, Eclipse, X11</name>
     <identifier>private.swap_left_control_tab_for_left_command_tab_for_some_apps</identifier>
@@ -55,4 +104,5 @@
       KeyCode::TAB, ModifierFlag::CONTROL_L
     </autogen>
   </item>
+
 </root>
