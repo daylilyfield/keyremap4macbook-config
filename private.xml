@@ -5,62 +5,62 @@
 <root>
 
   <item>
-    <name>Swap Control_R to Command_R except for Terminal, Vi, Eclipse, X11</name>
+    <name>Swap Control_L to Command_R except for Terminal, Vi, Eclipse, X11</name>
     <identifier>private.swap_right_control_for_right_command_except_for_some_apps</identifier>
     <not>TERMINAL,VI,ECLIPSE,X11</not>
     <autogen>
       --KeyToKey--
-      KeyCode::CONTROL_R,
+      KeyCode::CONTROL_L,
       KeyCode::COMMAND_R
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::COMMAND_R,
-      KeyCode::CONTROL_R
+      KeyCode::CONTROL_L
     </autogen>
   </item>
 
   <!-- for QuickSilver Binding (Command + DELETE) -->
   <item>
-    <name>Swap Control_R + DEL for Command_R + DEL for Termina, Vi, Eclipse, X11</name>
+    <name>Swap Control_L + DEL for Command_R + DEL for Termina, Vi, Eclipse, X11</name>
     <identifier>private.swap_right_control_del_for_right_command_del_for_some_apps</identifier>
     <only>TERMINAL,VI,ECLIPSE,X11</only>
     <autogen>
       --KeyToKey--
-      KeyCode::DELETE, ModifierFlag::CONTROL_R,
+      KeyCode::DELETE, ModifierFlag::CONTROL_L,
       KeyCode::DELETE, ModifierFlag::COMMAND_R
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::DELETE, ModifierFlag::COMMAND_R,
-      KeyCode::DELETE, ModifierFlag::CONTROL_R
+      KeyCode::DELETE, ModifierFlag::CONTROL_L
     </autogen>
   </item>
 
   <!-- for Application Switcher -->
   <item>
-    <name>Swap Control_R + Tab for Command_R + Tab for Terminal, Vi, Eclipse, X11</name>
+    <name>Swap Control_L + Tab for Command_R + Tab for Terminal, Vi, Eclipse, X11</name>
     <identifier>private.swap_right_control_tab_for_right_command_tab_for_some_apps</identifier>
     <only>TERMINAL,VI,ECLIPSE,X11</only>
     <autogen>
       --KeyToKey--
-      KeyCode::TAB, ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_R,
+      KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_R,
       KeyCode::TAB, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::TAB, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R,
-      KeyCode::TAB, ModifierFlag::CONTROL_R | ModifierFlag::SHIFT_R
+      KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_R
     </autogen>
     <autogen>
       --KeyToKey--
-      KeyCode::TAB, ModifierFlag::CONTROL_R,
+      KeyCode::TAB, ModifierFlag::CONTROL_L,
       KeyCode::TAB, ModifierFlag::COMMAND_R
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::TAB, ModifierFlag::COMMAND_R,
-      KeyCode::TAB, ModifierFlag::CONTROL_R
+      KeyCode::TAB, ModifierFlag::CONTROL_L
     </autogen>
   </item>
 
